@@ -33,4 +33,11 @@ public class BudgetServiceImpl implements BudgetService {
     public List<Budget> getAllBudget() {
         return budgetDAO.getAllBudget();
     }
+
+    @Override
+    public void deleteBudget(Integer id) {
+        Budget budget = budgetDAO.searchBudgetById(id);
+
+        budgetDAO.deleteMovie(budget);
+    }
 }

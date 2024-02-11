@@ -11,4 +11,6 @@ public interface BudgetService {
     Budget searchBudgetByIdMovie(int id);
 
     List<Budget> getAllBudget();
+
+    void deleteBudget(Integer id);
 }

@@ -25,11 +25,21 @@ public class BudgetDAOImpl implements BudgetDAO {
 
     @Override
     public Budget searchBudgetByIdMovie(int id) {
-        return budgetRepository.findById(id).orElse(null);
+        return budgetRepository.findByIdmov(id);
     }
 
     @Override
     public List<Budget> getAllBudget() {
         return budgetRepository.findAll();
+    }
+
+    @Override
+    public Budget searchBudgetById(Integer id) {
+        return budgetRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deleteMovie(Budget budget) {
+        budgetRepository.delete(budget);
     }
 }

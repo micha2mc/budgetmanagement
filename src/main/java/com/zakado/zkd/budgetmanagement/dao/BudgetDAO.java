@@ -12,4 +12,8 @@ public interface BudgetDAO {
     Budget searchBudgetByIdMovie(int id);
 
     List<Budget> getAllBudget();
+
+    Budget searchBudgetById(Integer id);
+
+    void deleteMovie(Budget budget);
 }

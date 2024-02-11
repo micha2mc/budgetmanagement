@@ -30,4 +30,10 @@ public class BudgetController {
         return new ResponseEntity<>(budgetService.saveBudget(budget), HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteMovie(@PathVariable("id") final Integer id) {
+        budgetService.deleteBudget(id);
+    }
+
+
 }
